@@ -80,7 +80,7 @@ describe('Login page', () => {
             .should('contain.text', 'No account found with that username.');
     });
 
-    it.only('an error message "No account found with that username" should appear  if the user entered unregistered user details and pressed "Enter"', () => {
+    it('The url of the new page must be different from the url of the Login page after a failed login', () => {
         LoginPage.usernameField
             .type(Cypress.env('username'))
 
